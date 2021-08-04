@@ -1,0 +1,14 @@
+.about-content h1{
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    text-decoration: inherit !important;
+    font-family:'Titillium Web', sans-serif;
+    font-size:50px;
+}
+
+.about-content p{
+    font-family:'Titillium Web', sans-serif;
+    font-size:22px;
+}
+
+

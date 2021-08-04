@@ -1,0 +1,57 @@
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    animation: slide 40s infinite;
+}
+
+@keyframes slide {
+    0%{
+        background-image: url("/src/images/bnr4.png");
+    }
+    20%{
+        background-image: url("/src/images/bnr4.png");
+    }
+    20.01%{
+        background-image: url("/src/images/bnr3.png");
+    }
+    40%{
+        background-image: url("/src/images/bnr3.png");
+    }
+
+    40.01%{
+        background-image: url("/src/images/bnr2.png");
+    }
+    60%{
+        background-image: url("/src/images/bnr2.png");
+    }
+    60.01%{
+        background-image: url("/src/images/bnr1.jpg");
+    }
+    80%{
+        background-image: url("/src/images/bnr1.jpg");
+    }
+    80.01%{
+        background-image: url("/src/images/bnr6.png");
+    }
+    100%{
+        background-image: url("/src/images/bnr6.png");
+    }
+}
+
+.header-text{
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+
+.header-text h1{
+    font-size:100px;
+    font-family: 'Kaushan Script', cursive;
+}
+.header-text p{
+    font-size:20px;
+    font-style: italic;
+}

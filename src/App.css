@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-brand{
+  background-image: linear-gradient(60deg,#0e0e0e,#3b3b3b);
+  border:none;
+  color:white;
+  
+}
+
+.btn-brand:hover{
+  background-image: linear-gradient(60deg,#3b3b3b,#0e0e0e);
+}
