@@ -55,3 +55,20 @@
     font-size:20px;
     font-style: italic;
 }
+
+@media (max-width: 768px) {
+    .header-text{
+        text-align: center;
+        color: #fff;
+        padding-top: 110px;
+    }
+    
+    .header-text h1{
+        font-size:65px;
+        font-family: 'Kaushan Script', cursive;
+    }
+    .header-text p{
+        font-size:15px;
+        font-style: italic;
+    }
+}

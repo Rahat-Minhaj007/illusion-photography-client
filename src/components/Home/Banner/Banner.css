@@ -1,0 +1,27 @@
+.banner1{
+    background: linear-gradient(rgba(59, 74, 90, 0.342), #344750), url("/src/images/bnr7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    cursor: pointer;
+}
+.banner2{
+    background: linear-gradient(rgba(59, 74, 90, 0.342), #344750), url("/src/images/bnr8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    cursor: pointer;
+  
+}
+
+.banner1 h2{
+    font-family: 'Kaushan Script', cursive;
+}
+
+.banner2 h2{
+    font-family: 'Kaushan Script', cursive;
+}

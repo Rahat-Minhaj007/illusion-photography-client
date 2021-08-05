@@ -7,7 +7,7 @@ const Header = () => {
         <div className="slider" id="home">
             <Navbar></Navbar>
             <div className="header-text">
-                <h1>PHOTO STUDIO</h1>
+                <h1>WELCOME to ILLUSION</h1>
                 <p>The camera sees more than the eye, so why not make use of it?</p>
 
             </div>

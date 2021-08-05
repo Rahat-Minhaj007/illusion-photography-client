@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
+import AddService from './components/AddService/AddService';
 
 
 function App() {
@@ -20,12 +21,16 @@ function App() {
                 <Route path="/home">
                     <Home></Home>
                 </Route>
+                <Route path="/addService">
+                    <AddService></AddService>
+                </Route>
                 <Route exact path="/">
                     <Home></Home>
                 </Route>
                 <Route path="*">
                     <NoMatch></NoMatch>
                 </Route>
+                
             </Switch>
         </Router>
     );
