@@ -1,0 +1,10 @@
+.orderCard img{
+    height:15rem;
+}
+.orderCard{
+     border: none;
+     box-shadow: 0px 10px 10px rgb(228, 228, 228);
+     cursor: pointer;
+     
+    
+}
