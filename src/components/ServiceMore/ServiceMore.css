@@ -1,0 +1,13 @@
+.ServiceMoreContent p{
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    text-decoration: inherit !important;
+    font-family:'Titillium Web', sans-serif;
+    font-size:20px;
+    text-align: justify;
+    padding: 10px 0px;
+}
+
+.ServiceMoreContent h2{
+    font-family: 'Kaushan Script', cursive;
+}

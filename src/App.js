@@ -8,6 +8,8 @@ import {
 import Home from './components/Home/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
 import AddService from './components/AddService/AddService';
+import ServiceMore from './components/ServiceMore/ServiceMore';
+import CheckOut from './components/CheckOut/CheckOut';
 
 
 function App() {
@@ -23,6 +25,12 @@ function App() {
                 </Route>
                 <Route path="/addService">
                     <AddService></AddService>
+                </Route>
+                <Route path="/serviceMore/:_id">
+                    <ServiceMore></ServiceMore>
+                </Route>
+                <Route path="/checkOut/:_id">
+                    <CheckOut></CheckOut>
                 </Route>
                 <Route exact path="/">
                     <Home></Home>

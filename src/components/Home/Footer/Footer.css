@@ -1,0 +1,6 @@
+.homeFooter{
+    background-image:linear-gradient(200deg,rgba(59, 74, 90, 0.342), #344750);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+}
