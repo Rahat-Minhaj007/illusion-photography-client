@@ -13,7 +13,7 @@ const AddService = () => {
             name: data.name,
             description: data.description,
             price: data.price,
-            imageURL: imageURL,
+            imageURL: imageURL
         };
 
         const url = `http://localhost:5055/addService`;
@@ -25,6 +25,7 @@ const AddService = () => {
             },
             body: JSON.stringify(serviceData),
         }).then((res) => console.log("server side response", res));
+        
     };
 
     const handleImageUpload = (event) => {

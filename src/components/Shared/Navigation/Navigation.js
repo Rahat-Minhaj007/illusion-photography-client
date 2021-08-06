@@ -1,18 +1,22 @@
 import { Link } from 'react-router-dom';
 import icon2 from '../../../images/icon2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus,faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 const Navigation = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { name, photo } = loggedInUser;
 
-    var link ={
-        color:"black",
-        textDecoration:"none",
+    var link = {
+        color: "black",
+        textDecoration: "none",
         fontWeight: "bold"
     }
-    var link2 ={
-        color:"black",
-        textDecoration:"none",
+    var link2 = {
+        color: "black",
+        textDecoration: "none",
         fontWeight: "bold"
     }
 
@@ -51,6 +55,13 @@ const Navigation = () => {
                         </li>
                         <li className="nav-item ">
                             <a className="nav-link me-5 text-dark fw-bold fs-6" href="#contact">Contact Us</a>
+                        </li>
+                        <li className="nav-item pe-3">
+                            <a href='/login'><button className="btn btn-secondary fw-bold">{name?.length > 0 ? 'Log Out' : 'Log In'}</button></a>
+                        </li>
+                        <li className="nav-item ">
+
+                            <Link to="#">{name?.length > 0 ? <button className="btn btn-secondary fw-bold"><img style={{ width: "30px", borderRadius: "50%" }} src={photo} alt="" /> {name}</button> : null}</Link>
                         </li>
 
                     </ul>

@@ -2,18 +2,22 @@ import { Link } from 'react-router-dom';
 import icon from '../../../images/icon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { faPlus,faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const { name, photo } = loggedInUser;
 
-    var link ={
-        color:"white",
-        textDecoration:"none",
+    var link = {
+        color: "white",
+        textDecoration: "none",
         fontWeight: "600"
     }
-    var link2 ={
-        color:"black",
-        textDecoration:"none",
+    var link2 = {
+        color: "black",
+        textDecoration: "none",
         fontWeight: "600"
     }
 
@@ -38,9 +42,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link me-5 text-light fw-bold fs-6" href="#service">Services</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link me-5 text-light fw-bold fs-6" href="#review">Reviews</a>
-                        </li>
+                        
                         <li class="nav-item dropdown">
                             <Link style={link} className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Admin
@@ -52,6 +54,13 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item ">
                             <a className="nav-link me-5 text-light fw-bold fs-6" href="#contact">Contact Us</a>
+                        </li>
+                        <li className="nav-item  pe-3 ">
+                            <a href='/login'><button className="btn btn-secondary fw-bold">{name?.length > 0 ? 'Log Out' : 'Log In'}</button></a>
+                        </li>
+                        <li className="nav-item ">
+
+                            <Link to="#">{name?.length > 0 ? <button className="btn btn-secondary fw-bold"><img style={{ width: "30px", borderRadius: "50%" }} src={photo} alt="" /> {name}</button> : null}</Link>
                         </li>
 
                     </ul>
