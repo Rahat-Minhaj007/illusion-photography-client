@@ -6,7 +6,7 @@ const ServiceData = (props) => {
     const { _id, name, price, imageURL } = props.service;
     return (
         <div className="col-md-4 p-3">
-            <div class="card serviceCard" style={{ width: "20rem" }}>
+            <div class="card serviceCard" style={{ width: "24rem" }}>
                 <img src={imageURL} class="card-img-top" alt="..." />
                 <div class="card-body">
                     <h5>{name}</h5>

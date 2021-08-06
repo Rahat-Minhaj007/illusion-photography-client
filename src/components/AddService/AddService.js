@@ -16,7 +16,7 @@ const AddService = () => {
             imageURL: imageURL
         };
 
-        const url = `http://localhost:5055/addService`;
+        const url = `https://fierce-sea-26565.herokuapp.com/addService`;
 
         fetch(url, {
             method: "POST",

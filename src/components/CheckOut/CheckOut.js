@@ -12,7 +12,7 @@ const CheckOut = () => {
 
     const { _id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5055/service`)
+        fetch(`https://fierce-sea-26565.herokuapp.com/service`)
             .then(res => res.json())
             .then(data => setOrderData(data))
 
@@ -35,7 +35,7 @@ const CheckOut = () => {
             quantity: 1
         };
 
-        const url = `http://localhost:5055/addOrder`;
+        const url = `https://fierce-sea-26565.herokuapp.com/addOrder`;
 
         fetch(url, {
             method: "POST",
@@ -74,7 +74,7 @@ const CheckOut = () => {
 
                     <input
                         email="email"
-                        type="email"
+                        type="text"
                         placeholder="Enter Email ..."
                         ref={register}
                     />

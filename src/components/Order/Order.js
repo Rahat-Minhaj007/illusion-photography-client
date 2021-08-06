@@ -9,7 +9,7 @@ const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { email } = loggedInUser;
     useEffect(() => {
-        fetch(`http://localhost:5055/order`)
+        fetch(`https://fierce-sea-26565.herokuapp.com/order`)
             .then(res => res.json())
             .then(data => setUserOrderedData(data))
     }, []);

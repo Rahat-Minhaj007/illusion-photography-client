@@ -8,7 +8,7 @@ import { UserContext } from '../../../App';
 
 const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const { name, photo } = loggedInUser;
+    const { name, photo,email } = loggedInUser;
 
     var link = {
         color: "white",
@@ -46,15 +46,18 @@ const Navbar = () => {
                             <Link className="nav-link me-5 text-light fw-bold fs-6" to="/order">Orders</Link>
                         </li>
                         
-                        <li class="nav-item dropdown">
+                        {
+                            (email =="rahatminhaj555@gmail.com" || email == "test@test.com")&&<li class="nav-item dropdown">
                             <Link style={link} className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Admin
                             </Link>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><Link style={link2} className="dropdown-item" to="/addService"><FontAwesomeIcon icon={faPlus} />Add Service</Link></li>
                                 <li><Link style={link2} className="dropdown-item" to="/manageService"><FontAwesomeIcon icon={faTasks} /> Manage Service</Link></li>
+                                <li><Link style={link2} className="dropdown-item" to="/manageOrder"><FontAwesomeIcon icon={faTasks} /> Manage Order</Link></li>
                             </ul>
                         </li>
+                        }
                         <li className="nav-item ">
                             <a className="nav-link me-5 text-light fw-bold fs-6" href="#contact">Contact Us</a>
                         </li>
