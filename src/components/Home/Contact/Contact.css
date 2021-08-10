@@ -16,7 +16,7 @@
 .contact-input input {
     height: 60px;
     width: 340px;
-    margin: 0px 15px;
+    margin: 0px 0px;
     border: 1px solid #fff;
     outline: none;
     background: rgba(0, 0, 0, 0.3);
@@ -24,6 +24,13 @@
     padding: 20px;
     border-radius: 10px;
 }
+.contact-input{
+    margin: 0px !important;
+}
+.contact-textarea{
+    margin: 0px !important;
+}
+
 
 .contact-input{
     margin: 0px;

@@ -47,3 +47,13 @@
 .btn-brand:hover{
   background-image: linear-gradient(60deg,#3b3b3b,#0e0e0e);
 }
+.spinner{
+  margin-left: 48%;
+  margin-top: 22%
+}
+@media only screen and (max-width: 768px) {
+  .spinner{
+    margin-left: 40%;
+    margin-top: 80%
+  }
+}

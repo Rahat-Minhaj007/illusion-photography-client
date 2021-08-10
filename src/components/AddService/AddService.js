@@ -9,6 +9,7 @@ const AddService = () => {
     const [imageURL, setImageURL] = useState(null);
 
     const onSubmit = (data) => {
+        console.log(data);
         const serviceData = {
             name: data.name,
             description: data.description,
@@ -24,8 +25,8 @@ const AddService = () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(serviceData),
-        }).then((res) => console.log("server side response", res));
-        
+        }).then((res) => alert("Successfully uploaded"));
+
     };
 
     const handleImageUpload = (event) => {
@@ -56,19 +57,24 @@ const AddService = () => {
                         name="name"
                         type="text"
                         placeholder="Enter Service Name ..."
-                        ref={register}
+                        ref={register({ required: true })}
+
+
                     />
+                    {errors.name && <span style={{ color:"red"}}>This field is required</span>}
                 </div>
                 <br />
 
                 <div className="login-input-field">
 
-                    <textarea name="description" type="text" placeholder="Enter Description ..." cols="30" rows="10" ref={register}></textarea>
+                    <textarea name="description" type="text" placeholder="Enter Description ..." cols="30" rows="10" ref={register({ required: true })}></textarea>
+                    {errors.description && <span style={{ color:"red"}}>This field is required</span>}
                 </div>
                 <br />
                 <div className="login-input-field">
 
-                    <input name="price" type="text" placeholder="Add Price ..." ref={register} />
+                    <input name="price" type="text" placeholder="Add Price ..." ref={register({ required: true })} />
+                    {errors.price && <span style={{ color:"red"}}>This field is required</span>}
                 </div>
                 <br />
                 <div className="login-input-field">
@@ -77,7 +83,9 @@ const AddService = () => {
                         name="exampleRequired"
                         type="file"
                         onChange={handleImageUpload}
+                        ref={register({ required: true })}
                     />
+                     {errors.exampleRequired && <span style={{ color:"red"}}>This field is required</span>}
                 </div>
                 <br />
 

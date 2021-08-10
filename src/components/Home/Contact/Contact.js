@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="contact mt-5" id="contact">
             <h1 className="text-center text-light p-5">CONTACT US</h1>
             <div class="contact-form">
-                <div class="row contact-input d-flex justify-content-center">
+                <div class="row contact-input d-flex justify-content-center" >
                     <div className="col-md-3">
                         <input type="text" name="name" placeholder="Your Name" />
                     </div>
@@ -18,7 +18,7 @@ const Contact = () => {
                         <input type="text" name="subject" placeholder="Subject" />
                     </div>
                 </div>
-                <div class="row contact-textarea d-flex justify-content-center">
+                <div class="row contact-textarea d-flex justify-content-center" >
                     <div className="col-md-9 ps-4">
                         <textarea
                             class="textarea"

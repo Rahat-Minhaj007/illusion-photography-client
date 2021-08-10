@@ -24,6 +24,7 @@ const CheckOut = () => {
 
 
     const onSubmit = (data) => {
+        console.log(data);
         const orderData = {
             name: data.name,
             email: data.email,
@@ -73,7 +74,7 @@ const CheckOut = () => {
                 <div className="login-input-field">
 
                     <input
-                        email="email"
+                        name="email"
                         type="text"
                         placeholder="Enter Email ..."
                         ref={register}
@@ -84,7 +85,7 @@ const CheckOut = () => {
                 <div className="login-input-field">
 
                     <input
-                        address="address"
+                        name="address"
                         type="text"
                         placeholder="Enter Address ..."
                         ref={register}
@@ -96,7 +97,7 @@ const CheckOut = () => {
                 <div className="login-input-field">
 
                     <input
-                        phone="phone"
+                        name="phone"
                         type="text"
                         placeholder="Enter Phone Number ..."
                         ref={register}
