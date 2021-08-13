@@ -25,7 +25,7 @@ const AddService = () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(serviceData),
-        }).then((res) => alert("Successfully uploaded"));
+        }).then((res) => alert("Successfully Uploaded"));
 
     };
 

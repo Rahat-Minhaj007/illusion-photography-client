@@ -14,21 +14,21 @@ const ManageOrders = () => {
 
     }, []);
 
-   
-    return (
-        <div>
-            <Navigation></Navigation>
-<div className="container ">
-            
-            <div className="row p-3 ">
-                {
-                    manageOrderData.map((mn) => <ManageOrdersDetail manageOrders={mn} key={mn._id}></ManageOrdersDetail>)
-                }
-            </div>
 
+    return (
+        <div >
+            <Navigation></Navigation>
+            <div className="container d-flex justify-content-center">
+
+                <div className="row ">
+                    {
+                        manageOrderData.map((mn) => <ManageOrdersDetail manageOrders={mn} key={mn._id}></ManageOrdersDetail>)
+                    }
+                </div>
+
+            </div>
         </div>
-        </div>
-        
+
     );
 };
 

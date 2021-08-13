@@ -24,9 +24,9 @@ const ManageServiceDetail = (props) => {
 
     return (
         <div className="col-md-4 p-3">
-            <div class="card serviceCard" style={{ width: "20rem" }}>
-                <img src={imageURL} class="card-img-top" alt="..." />
-                <div class="card-body">
+            <div className="card serviceCard" style={{ width: "20rem" }}>
+                <img src={imageURL} className="card-img-top" alt="..." />
+                <div className="card-body">
                     <h5>{name}</h5>
                     <h6>$ {price}</h6>
 

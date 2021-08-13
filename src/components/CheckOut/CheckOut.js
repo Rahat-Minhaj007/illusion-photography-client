@@ -8,7 +8,7 @@ import "./CheckOut.css";
 const CheckOut = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [orderData,setOrderData] = useState([])
+    const [orderData, setOrderData] = useState([])
 
     const { _id } = useParams();
     useEffect(() => {
@@ -19,7 +19,7 @@ const CheckOut = () => {
     }, []);
 
     const orderInfo = orderData.find((or) => (or._id) === (_id));
-    
+
 
 
 
@@ -28,12 +28,13 @@ const CheckOut = () => {
         const orderData = {
             name: data.name,
             email: data.email,
-            address:data.address,
+            address: data.address,
             phone: data.phone,
-            loggedInUser:loggedInUser,
-            order:orderInfo,
+            loggedInUser: loggedInUser,
+            order: orderInfo,
             orderTime: new Date().toString("dddd, mmmm dS, yyyy, g:i A TT"),
-            quantity: 1
+            quantity: 1,
+            status: "Pending"
         };
 
         const url = `https://fierce-sea-26565.herokuapp.com/addOrder`;
@@ -44,13 +45,9 @@ const CheckOut = () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(orderData),
-        }) 
-        .then(res => res.json())
-        .then (data => {
-          if(data){
-            alert('Your order placed successfully');
-          }
-        });
+        })
+            .then(res => alert("Your order placed successfully"))
+
     };
 
 
@@ -67,8 +64,9 @@ const CheckOut = () => {
                         name="name"
                         type="text"
                         placeholder="Enter Service Name ..."
-                        ref={register}
+                        ref={register({ required: true })}
                     />
+                    {errors.name && <span style={{ color: "red" }}>This field is required</span>}
                 </div>
                 <br />
                 <div className="login-input-field">
@@ -77,8 +75,9 @@ const CheckOut = () => {
                         name="email"
                         type="text"
                         placeholder="Enter Email ..."
-                        ref={register}
+                        ref={register({ required: true })}
                     />
+                    {errors.name && <span style={{ color: "red" }}>This field is required</span>}
                 </div>
 
                 <br />
@@ -88,8 +87,9 @@ const CheckOut = () => {
                         name="address"
                         type="text"
                         placeholder="Enter Address ..."
-                        ref={register}
+                        ref={register({ required: true })}
                     />
+                    {errors.name && <span style={{ color: "red" }}>This field is required</span>}
                 </div>
 
                 <br />
@@ -100,13 +100,14 @@ const CheckOut = () => {
                         name="phone"
                         type="text"
                         placeholder="Enter Phone Number ..."
-                        ref={register}
+                        ref={register({ required: true })}
                     />
+                    {errors.name && <span style={{ color: "red" }}>This field is required</span>}
                 </div>
 
                 <br />
 
-              
+
 
                 <input className="anotherLoginBtnAdmin" type="submit" />
 
