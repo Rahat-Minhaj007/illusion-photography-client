@@ -3,7 +3,12 @@
     font-style: inherit !important;
     text-decoration: inherit !important;
     font-family:'Titillium Web', sans-serif;
-    font-size:48px;
+   
+    font-weight: 700 !important;
+    color: rgb(37, 37, 37);
+    padding-right: 130px ;
+    font-size:55px;
+    text-align:inherit;
 
 }
 
@@ -14,6 +19,37 @@
     font-family:'Titillium Web', sans-serif;
     font-size:20px;
     text-align: justify;
+    font-weight: 700 !important;
+    color: rgb(37, 37, 37);
+    padding-left: 117px ;
 }
 
+.about-content{
+    padding: 50px 165px;
+}
+
+@media only screen and (max-width:768px){
+
+    .about-content h1{
+        
+        padding-right: 0px;
+        padding-bottom: 10px;
+        font-size:35px;
+     
+    
+    }
+    
+    .about-content p{
+      
+        padding-left: 0px ;
+        padding-top: 10px;
+    }
+
+    .about-content{
+        padding: 0px 0px;
+    }
+    
+    
+
+}
 

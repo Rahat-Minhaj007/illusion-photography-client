@@ -17,6 +17,7 @@ import Order from './components/Order/Order';
 import ManageService from './components/ManageService/ManageService';
 import ManageOrders from './components/ManageOrders/ManageOrders';
 import Loader from 'react-loader-spinner';
+import Wedding from './components/Home/Wedding/Wedding';
 
 export const UserContext = createContext();
 
@@ -58,6 +59,9 @@ function App() {
                         </PrivateRoute>
                         <Route path="/serviceMore/:_id">
                             <ServiceMore></ServiceMore>
+                        </Route>
+                        <Route path="/wedding">
+                            <Wedding></Wedding>
                         </Route>
                         <PrivateRoute path="/checkOut/:_id">
                             <CheckOut></CheckOut>

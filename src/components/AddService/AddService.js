@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./AddService.css";
+import swal from 'sweetalert';
 
 const AddService = () => {
     const { register, handleSubmit, watch, errors } = useForm();
@@ -25,7 +26,7 @@ const AddService = () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(serviceData),
-        }).then((res) => alert("Successfully Uploaded"));
+        }).then((res) =>  swal("Congratulations!", "Successfully Uploaded!", "success"));
 
     };
 

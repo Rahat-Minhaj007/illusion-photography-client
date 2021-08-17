@@ -2,13 +2,29 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import './ManageServiceDetail.css';
+import swal from 'sweetalert';
 
 const ManageServiceDetail = (props) => {
     const { _id, name, price, imageURL } = props.manage;
 
     const handleDelete = (id) => {
         console.log(id);
-        if(window.confirm('Do you want to delete this item?')){
+        if(window.swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Poof! Your imaginary file has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              swal("Your imaginary file is safe!");
+            }
+          })){
 
         
                 fetch(`https://fierce-sea-26565.herokuapp.com/delete/${id}`,{

@@ -1,0 +1,25 @@
+
+.wedding-image img{
+    
+    width:100%;
+    padding:50px 120px;
+    height: 100vh;
+
+}
+.wedding-gallery{
+      padding-left: 147px !important;
+      padding-right:165px !important;
+}
+
+@media  screen and (max-width:768px){
+    .wedding-image img{
+        width:115%;
+        padding:5px 5px;
+        height: 30vh;
+    }
+    .wedding-gallery{
+        padding-left: 5px !important;
+        padding-right:5px !important;
+  }
+}
+

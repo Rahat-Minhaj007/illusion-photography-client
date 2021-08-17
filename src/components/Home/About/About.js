@@ -3,8 +3,8 @@ import './About.css';
 
 const About = () => {
     return (
-        <div className="container about-content" id="about">
-            <div className="row p-5 d-flex justify-content-between">
+        <div className="about-content" id="about">
+            <div className="row p-3 d-flex justify-content-between">
                 <div className="col-md-7">
                     <h1>There’s nothing more incredible than finding the one person you can’t live without. Your true best friend. You two are on fire together.</h1>
                 </div>

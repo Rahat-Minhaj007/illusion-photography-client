@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { UserContext } from "../../App";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./CheckOut.css";
+import swal from 'sweetalert';
 
 const CheckOut = () => {
     const { register, handleSubmit, watch, errors } = useForm();
@@ -11,6 +12,7 @@ const CheckOut = () => {
     const [orderData, setOrderData] = useState([])
 
     const { _id } = useParams();
+    
     useEffect(() => {
         fetch(`https://fierce-sea-26565.herokuapp.com/service`)
             .then(res => res.json())
@@ -46,7 +48,7 @@ const CheckOut = () => {
             },
             body: JSON.stringify(orderData),
         })
-            .then(res => alert("Your order placed successfully"))
+            .then(res => swal("Thank You!", "Your order placed successfully!", "success"))
 
     };
 
